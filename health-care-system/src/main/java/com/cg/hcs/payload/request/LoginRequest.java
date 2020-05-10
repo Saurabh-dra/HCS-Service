@@ -5,11 +5,9 @@ import javax.validation.constraints.Pattern;
 
 public class LoginRequest {
 	@NotBlank
-	@Pattern(regexp = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$", message = "Invalid Email Type")
 	private String username;
 
 	@NotBlank
-	@Pattern(regexp = "^(?=.*?[A-Z])(?=.*[$@$!%*?&])(?=.*?[a-z])(?=.*?[0-9]).{8,14}$", message = "Password in Invalid Format")
 	private String password;
 
 	public String getUsername() {

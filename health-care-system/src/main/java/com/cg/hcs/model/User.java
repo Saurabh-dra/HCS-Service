@@ -18,20 +18,15 @@ public class User {
 	private Long id;
 
 	@NotEmpty(message = "Please Enter Email")
-	@Email		
-	@Pattern(regexp = "^(?=.*?[A-Z])(?=.*[$@$!%*?&])(?=.*?[a-z])(?=.*?[0-9]).{8,14}$", message = "Password in Invalid Format")
+	@Email
 	private String username;
 	@NotEmpty(message = "Please Enter First Name")
-	@Pattern(regexp = "^([A-Z][a-z]*((\\s[A-Za-z])?[a-z]*)*)$", message = "First Letter must be capital")
 	private String firstName;
 	@NotEmpty(message = "Please Enter Last Name")
-	@Pattern(regexp = "^([A-Z][a-z]*((\\s[A-Za-z])?[a-z]*)*)$", message = "First Letter must be capital")
 	private String lastName;
 	@NotNull(message = "Please Enter Contact Number")
-	@Pattern(regexp = "^[1-9][0-9]{9}$", message = "Invalid phone number should be 10digit and must not start with 0")
 	private long contactNo;
 	@NotEmpty(message = "Please Enter Password")
-	@Pattern(regexp = "^(?=.*?[A-Z])(?=.*[$@$!%*?&])(?=.*?[a-z])(?=.*?[0-9]).{8,14}$", message = "Password in Invalid Format")
 	private String password;
 
 	@ManyToMany(fetch = FetchType.LAZY)
